@@ -1,0 +1,202 @@
+main {
+    background: linear-gradient(45deg, rgb(227,255,253), rgb(202,243,240))
+}
+
+#hero {
+    height: 100vh;
+    background-image: url('image/ocean.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    width: auto;
+    max-width: 900px;
+    background-color: rgba(51, 47, 47, 0.8);
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    position: relative;
+    top: 12.5rem;
+}
+
+.hero-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    margin-bottom: 2.25rem;
+}
+
+.hero-content p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.hero-content a {
+    text-decoration: none;
+    background-color: rgb(255,251,0);
+    padding: 0.75rem 1.25rem;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: wpx 4px 8px rgb(68,67,67);
+}
+
+.hero-content a:hover {
+    background-color: rgb(255,202,0);
+}
+
+#highlights {
+    padding: 24px;
+    background: linear-gradient(45deg, rgb(227,255,253), rgb(202,243,240))
+}
+
+#highlights h2 {
+    text-align: center;
+}
+
+.destination {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+
+.destination h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(59,65,64);
+    margin: 1.5rem 0;
+}
+
+.places {
+    margin: 0 1.25rem;
+    flex:0 1 300px;
+}
+
+.places img {
+    height: auto;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.places p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: rgb(124,123,123);
+    margin: 1.25rem 0;
+}
+
+.places strong {
+    color: rgb(0,160,117);
+}
+
+.about {
+    max-width: 1200px;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    background: linear-gradient(45deg, rgb(227,255,253), rgb(202,243,240))
+  }
+  
+  article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 2rem;
+  }
+  
+ article p {
+    text-align: justify;
+  }
+  
+  .aside-image {
+    align-items: center;
+    max-width: 100%; /* Ensures the image is responsive and doesn't overflow its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+    display: block; /* Ensures the image is a block-level element */
+    margin: 20px 0; /* Adds some space above and below the image */
+  }
+  
+  aside h3 {
+    text-align: center;
+  }
+  
+  article h1, article h2, aside h3 {
+    color: #333;
+  }
+  
+  article p, aside p, aside ul {
+    color: #666;
+  }
+  
+  aside {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 50px 0;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+    .about {
+        padding: 80px 10px 20px;
+    }
+
+    article {
+         margin-bottom: 2rem;
+    }
+
+    article,aside {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-content {
+        width: 80%;
+    }
+}
+
+/* Large Devices, Desktops */
+@media (min-width: 1025px) {
+    .destination {
+        justify-content: space-around;
+    }
+
+    .places {
+        width: calc(33.333% - 40px); /* Subtracting margin */
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article {
+        flex-basis: 60%;
+    }
+
+    aside {
+        flex-basis: 40%;
+    }
+}

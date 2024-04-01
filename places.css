@@ -1,0 +1,140 @@
+body {
+  background: linear-gradient(30deg, rgb(132, 130, 130), rgb(58, 58, 58));
+  color: rgb(68, 68, 68);
+}
+
+.page-logo {
+  color: rgb(183, 230, 235);
+}
+
+header {
+  position: static;
+}
+
+header a {
+  color: rgb(183, 230, 235);
+}
+
+header nav a:hover {
+  background-color: rgb(183, 230, 235);
+  color: rgb(59, 59, 59);
+}
+
+main ul {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 48px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+main li {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+main li img {
+  width: 100%;
+  height: 280px;
+}
+
+.item-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-content h2 {
+  margin: 0;
+}
+
+.action {
+  text-align: right;
+}
+
+.action a {
+  text-decoration: none;
+  padding: 6px;
+  color: rgb(22, 211, 228);
+  border-radius: 5px;
+}
+
+.action a:hover {
+  background-color: rgb(235, 253, 255);
+}
+
+@media (min-width: 768px) {
+  main ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header ul {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  main ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  li:nth-of-type(3) {
+    grid-column: 1 / span 2;
+  }
+
+  main li {
+    flex-direction: row;
+  }
+  main li img {
+    width: 300px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  header ul {
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer li {
+    margin: 10px 0;
+  }
+}
